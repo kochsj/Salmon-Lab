@@ -38,10 +38,33 @@ seattleCoffee.totalCookiesPurchased();
 // console.log(seattleCoffee.cookiesPerHour);
 // console.log(numberOfCustomers(seattleCoffee.min, seattleCoffee.max));
 
-// var createBellevueSalesList = document.getElementById('bellevueSalesFigures');
-// var bellevueCoffee = {
-//     min: 
-// }
+var createBellevueSalesList = document.getElementById('bellevueSalesFigures');
+
+var bellevueCoffee = {
+    cookiesPerHour: [],
+    min: 8,
+    max: 50,
+    averageCookiesPerCustomer: 2,
+    numberOfCookiesNeeded: function() {
+        for(var i = 0; i < storeHours.length; i++) {
+            bellevueCoffee.cookiesPerHour.push((numberOfCustomers(bellevueCoffee.min, bellevueCoffee.max))*(bellevueCoffee.averageCookiesPerCustomer));
+            var bellevueSales = document.createElement('li');
+            createBellevueSalesList.appendChild(bellevueSales);
+            bellevueSales.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
+        }
+    },
+    totalCookiesPurch: 0,
+    totalCookiesPurchased: function(){
+        for(var z = 0; z < bellevueCoffee.cookiesPerHour.length; z++) {
+            this.totalCookiesPurch = this.totalCookiesPurch + this.cookiesPerHour[z];
+        }
+        var totalCookiesListItem = document.createElement('li');
+        createBellevueSalesList.appendChild(totalCookiesListItem);
+        totalCookiesListItem.textContent = `Total: ${this.totalCookiesPurch} cookies`;
+    }
+}
+bellevueCoffee.numberOfCookiesNeeded();
+bellevueCoffee.totalCookiesPurchased();
 
 // var createRentonSalesList = document.getElementById('rentonSalesFigures');
 
