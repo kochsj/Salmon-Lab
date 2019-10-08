@@ -14,8 +14,14 @@ var CoffeeShop = function(cookiesPerHour, min, max, averageCookiesPerCustomer, t
   this.totalCookiesPurch = totalCookiesPurch;
 };
 
-var bellevueCoffee = new CoffeeShop([], 3, 40, 6, 0);
-console.log(bellevueCoffee);
+// CoffeeShop.prototype.numberOfCookiesNeeded = function() {
+//     for(var i = 0; i < storeHours.length; i++) {
+//         this.cookiesPerHour.push(Math.round((numberOfCustomers(this.min, this.max))*(this.averageCookiesPerCustomer)));
+//         var 
+//     }
+// }
+// var bellevueCoffee = new CoffeeShop([], 3, 40, 6, 0);
+// console.log(bellevueCoffee);
 
 var createSeattleSalesList = document.getElementById('seattleSalesFigures');
 var seattleCoffee = {
@@ -24,6 +30,7 @@ var seattleCoffee = {
   min: 23,
   max: 65,
   averageCookiesPerCustomer: 6.3,
+  totalCookiesPurch: 0,
 
   numberOfCookiesNeeded: function() {
     for(var i = 0; i < storeHours.length; i++){
@@ -31,20 +38,24 @@ var seattleCoffee = {
       var seattleSales = document.createElement('li');
       createSeattleSalesList.appendChild(seattleSales);
       seattleSales.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
-    }
-  },
-  totalCookiesPurch: 0,
-  totalCookiesPurchased: function(){
-    for(var y = 0; y < seattleCoffee.cookiesPerHour.length; y++){
-      this.totalCookiesPurch = this.totalCookiesPurch + this.cookiesPerHour[y];
+      this.totalCookiesPurch += this.cookiesPerHour[i];
     }
     var totalCookiesListItem = document.createElement('li');
     createSeattleSalesList.appendChild(totalCookiesListItem);
     totalCookiesListItem.textContent = `Total: ${this.totalCookiesPurch} cookies`;
-  }
+  },
+//   totalCookiesPurchased: function(){
+//     for(var y = 0; y < seattleCoffee.cookiesPerHour.length; y++){
+//       this.totalCookiesPurch = this.totalCookiesPurch + this.cookiesPerHour[y];
+//     }
+//     var totalCookiesListItem = document.createElement('li');
+//     createSeattleSalesList.appendChild(totalCookiesListItem);
+//     totalCookiesListItem.textContent = `Total: ${this.totalCookiesPurch} cookies`;
+//   }
 };
 seattleCoffee.numberOfCookiesNeeded();
-seattleCoffee.totalCookiesPurchased();
+console.log(seattleCoffee.totalCookiesPurch);
+// seattleCoffee.totalCookiesPurchased();
 // console.log(seattleCoffee.totalCookiesPurch);
 // console.log(seattleCoffee.cookiesPerHour);
 // console.log(numberOfCustomers(seattleCoffee.min, seattleCoffee.max));
