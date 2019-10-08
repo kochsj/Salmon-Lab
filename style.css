@@ -1,4 +1,5 @@
 article {
     display: inline-block;
     border: black solid 5px;
+    font-family: 'Oswald', sans-serif;
 }
