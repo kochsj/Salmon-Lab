@@ -1,0 +1,22 @@
+article {
+    display: inline-block;
+    border: black solid 5px;
+    font-family: 'Oswald', sans-serif;
+}
+html {
+    background-color: orange;
+}
+article {
+    background-color: rgb(83, 13, 13);
+    color: snow;
+}
+main {
+    position: absolute;
+    top: 200px;
+    left: 160px;
+}
+header {
+    text-align: center;
+    font-size: 50px;
+    margin-top:80px;
+}
