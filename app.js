@@ -1,9 +1,11 @@
+//RANDOM NUMBER GENERATOR
 var numberOfCustomers = function(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random()*(max - min + 1)) + min;
 };
 
+//STORE HOURS - COLUMN HEADINGS
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var tableHeadingStoreHours = document.getElementById('firstSalesTableRow');
 var printTableHeadings = function() {
@@ -18,9 +20,7 @@ var printTableHeadings = function() {
 };
 printTableHeadings();
 
-// var createSeattleSalesList = document.getElementById('seattleSalesTableRow');
-
-
+//COFFEESHOP CONSTRUCTOR FUNCTION
 var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.cookiesPerHour = [];
   this.min = min;
@@ -32,6 +32,9 @@ var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
 };
 
 CoffeeShop.prototype.numberOfCookiesNeeded = function() {
+  var tableCityName = document.createElement('tr');
+  this.salesList.appendChild(tableCityName);
+  tableCityName.textContent = `${this.cityName}`;
   for(var i = 0; i < storeHours.length; i++) {
     this.cookiesPerHour.push(Math.round((numberOfCustomers(this.min, this.max))*(this.averageCookiesPerCustomer)));
     var storeSales = document.createElement('td');
@@ -44,9 +47,19 @@ CoffeeShop.prototype.numberOfCookiesNeeded = function() {
   totalCookiesListItem.textContent = `${this.totalCookiesPurch}`;
 };
 
-var seattleCoffee = new CoffeeShop(23, 65, 6.3, 'seattle');
-console.log(seattleCoffee.cityName);
+//SEATTLE
+var seattleCoffee = new CoffeeShop(23, 65, 6.3, 'Seattle');
 seattleCoffee.numberOfCookiesNeeded();
+console.log(seattleCoffee);
+//TOKYO
+var tokyoCoffee = new CoffeeShop(3, 24, 1.2, 'Tokyo');
+console.log(tokyoCoffee);
+tokyoCoffee.numberOfCookiesNeeded();
+//DUBAI
+
+//PARIS
+
+//LIMA
 
 
 // var seattleCoffee = {
