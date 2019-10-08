@@ -124,8 +124,35 @@ var everettCoffee = {
     }
 
 }
-console.log(everettCoffee.cookiesPerHour);
+// console.log(everettCoffee.cookiesPerHour);
 everettCoffee.numberOfCookiesNeeded();
 everettCoffee.totalCookiesPurchased();
 
-// var createTacomaSalesList = document.getElementById('tacomaSalesFigures');
+var createTacomaSalesList = document.getElementById('tacomaSalesFigures');
+
+var tacomaCoffee = {
+    cookiesPerHour: [],
+    min: 15,
+    max: 100,
+    averageCookiesPerCustomer: 4,
+    totalCookiesPurch: 0,
+
+    numberOfCookiesNeeded: function() {
+        for(i = 0; i < storeHours.length; i++) {
+            tacomaCoffee.cookiesPerHour.push((numberOfCustomers(tacomaCoffee.min, tacomaCoffee.max))*tacomaCoffee.averageCookiesPerCustomer);
+            var tacomaSales = document.createElement('li');
+            createTacomaSalesList.appendChild(tacomaSales);
+            tacomaSales.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
+        }
+    },
+    totalCookiesPurchased: function(){
+        for(var z = 0; z < storeHours.length; z++){
+        this.totalCookiesPurch = this.totalCookiesPurch + this.cookiesPerHour[z];
+       }
+       var totalCookiesListItem = document.createElement('li');
+       createTacomaSalesList.appendChild(totalCookiesListItem);
+       totalCookiesListItem.textContent = `Total: ${this.totalCookiesPurch}`;
+    }
+}
+tacomaCoffee.numberOfCookiesNeeded();
+tacomaCoffee.totalCookiesPurchased();
