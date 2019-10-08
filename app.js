@@ -7,8 +7,11 @@ var numberOfCustomers = function(min, max) {
 
 //STORE HOURS - COLUMN HEADINGS//////////////////////////////////
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-var tableHeadingStoreHours = document.getElementById('firstSalesTableRow');
+var tableHeadingStoreHours = document.getElementById('salesTable');
 var printTableHeadings = function() {
+  var locationHeading = document.createElement('th');
+  tableHeadingStoreHours.appendChild(locationHeading);
+  locationHeading.textContent = '';
   for(var a = 0; a < storeHours.length; a++) {
     var tableStoreHours = document.createElement('th');
     tableHeadingStoreHours.appendChild(tableStoreHours);
