@@ -6,6 +6,17 @@ var numberOfCustomers = function(min, max) {
   return Math.floor(Math.random()*(max - min + 1)) + min;
 };
 
+var CoffeeShop = function(cookiesPerHour, min, max, averageCookiesPerCustomer, totalCookiesPurch) {
+  this.cookiesPerHour = cookiesPerHour;
+  this.min = min;
+  this.max = max;
+  this.averageCookiesPerCustomer = averageCookiesPerCustomer;
+  this.totalCookiesPurch = totalCookiesPurch;
+};
+
+var bellevueCoffee = new CoffeeShop([], 3, 40, 6, 0);
+console.log(bellevueCoffee);
+
 var createSeattleSalesList = document.getElementById('seattleSalesFigures');
 var seattleCoffee = {
   // storeHours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
