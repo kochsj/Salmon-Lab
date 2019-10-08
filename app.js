@@ -12,34 +12,40 @@ var printTableHeadings = function() {
     tableHeadingStoreHours.appendChild(tableStoreHours);
     tableStoreHours.textContent = `${storeHours[a]}`;
   }
+  var tableHeadingTotals = document.createElement('th');
+  tableHeadingStoreHours.appendChild(tableHeadingTotals);
+  tableHeadingTotals.textContent = 'Daily Location Total';
 };
 printTableHeadings();
 
+// var createSeattleSalesList = document.getElementById('seattleSalesTableRow');
 
-var createSeattleSalesList = document.getElementById('seattleSalesFigures');
 
-var CoffeeShop = function(min, max, averageCookiesPerCustomer) {
+var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.cookiesPerHour = [];
   this.min = min;
   this.max = max;
   this.averageCookiesPerCustomer = averageCookiesPerCustomer;
   this.totalCookiesPurch = 0;
+  this.cityName = cityName;
+  this.salesList = document.getElementById(`${this.cityName}`);
 };
 
 CoffeeShop.prototype.numberOfCookiesNeeded = function() {
   for(var i = 0; i < storeHours.length; i++) {
     this.cookiesPerHour.push(Math.round((numberOfCustomers(this.min, this.max))*(this.averageCookiesPerCustomer)));
     var storeSales = document.createElement('td');
-    createSeattleSalesList.appendChild(storeSales);
-    storeSales.textContent = `${storeHours[i]}: ${this.cookiesPerHour[i]} cookies`;
+    this.salesList.appendChild(storeSales);
+    storeSales.textContent = `${this.cookiesPerHour[i]}`;
     this.totalCookiesPurch += this.cookiesPerHour[i];
   }
-  var totalCookiesListItem = document.createElement('li');
-  createSeattleSalesList.appendChild(totalCookiesListItem);
-  totalCookiesListItem.textContent = `Total: ${this.totalCookiesPurch} cookies`;
+  var totalCookiesListItem = document.createElement('td');
+  this.salesList.appendChild(totalCookiesListItem);
+  totalCookiesListItem.textContent = `${this.totalCookiesPurch}`;
 };
 
-var seattleCoffee = new CoffeeShop(23, 65, 6.3);
+var seattleCoffee = new CoffeeShop(23, 65, 6.3, 'seattle');
+console.log(seattleCoffee.cityName);
 seattleCoffee.numberOfCookiesNeeded();
 
 
