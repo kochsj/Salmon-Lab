@@ -47,7 +47,9 @@ var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.averageCookiesPerCustomer = averageCookiesPerCustomer;
   this.totalCookiesPurch = 0;
   this.cityName = cityName;
-  this.salesList = document.getElementById(`${this.cityName}`);
+  this.row = document.createElement('tr');
+  this.row.setAttribute('id', this.cityName);
+  this.salesList = document.getElementById(this.cityName);
 };
 
 CoffeeShop.prototype.numberOfCookiesNeeded = function() {
@@ -70,6 +72,7 @@ CoffeeShop.prototype.numberOfCookiesNeeded = function() {
 //SEATTLE////////////////////////////////
 var seattleCoffee = new CoffeeShop(23, 65, 6.3, 'Seattle');
 seattleCoffee.numberOfCookiesNeeded();
+console.log(seattleCoffee);
 //TOKYO/////////////////////////////////
 var tokyoCoffee = new CoffeeShop(3, 24, 1.2, 'Tokyo');
 tokyoCoffee.numberOfCookiesNeeded();
