@@ -11,9 +11,8 @@ article {
     color: snow;
 }
 main {
-    position: absolute;
-    top: 200px;
-    left: 160px;
+    position: relative;
+
 }
 header {
     text-align: center;
@@ -30,4 +29,13 @@ table {
 .emptyCell {
     border: none;
     font-weight: bold;
+}
+
+input {
+    display: table;
+    width: 350px;
+}
+
+form {
+    display: inline-block;
 }

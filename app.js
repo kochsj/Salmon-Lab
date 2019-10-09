@@ -5,6 +5,23 @@ var numberOfCustomers = function(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random()*(max - min + 1)) + min;
 };
+//USER FORM EVENT HANDLER/////////////////////////////////////////
+var userFormThing = document.getElementById('userForm');
+userFormThing.addEventListener('submit', buildOutStore);
+
+function buildOutStore(event) {
+  event.preventDefault();
+  var location = event.target.location.value;
+  var average = event.target.averageCookies.value;
+  var minimum = event.target.minCustomers.value;
+  var maximum = event.target.maxCustomers.value;
+
+  var buildStore = new CoffeeShop(minimum, maximum, average, location);
+  buildStore.numberOfCookiesNeeded();
+  var dynamicTotalsRow = document.getElementById('totalsRow');
+  dynamicTotalsRow.remove();
+  addingTotalsByHour();
+}
 
 //STORE HOURS - COLUMN HEADINGS//////////////////////////////////
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -56,7 +73,7 @@ var addingTotalsByHour = function() {
   totalOfAllStoresCell.textContent = `${totalsAcrossTheCompany}`;
 };
 
-//COFFEESHOP CONSTRUCTOR FUNCTION///////////////////////////////////
+//COFFEESHOP OBJECT CONSTRUCTOR FUNCTION///////////////////////////////////
 var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.cookiesPerHour = [];
   this.min = min;
@@ -67,6 +84,7 @@ var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.salesList = 0;
 };
 
+//COFFEESHOP METHOD///////////////////////////////////////////////////////
 CoffeeShop.prototype.numberOfCookiesNeeded = function() {
   this.row = document.createElement('tr');
   this.row.setAttribute('id', this.cityName);
@@ -103,7 +121,9 @@ parisCoffee.numberOfCookiesNeeded();
 //LIMA/////////////////////////////////
 var limaCoffee = new CoffeeShop(2, 16, 4.6, 'Lima');
 limaCoffee.numberOfCookiesNeeded();
-
+//Houston////
+var houstonCoffee = new CoffeeShop(4, 45, 3.8, 'Houston');
+houstonCoffee.numberOfCookiesNeeded();
 
 addingTotalsByHour();
 
