@@ -38,7 +38,7 @@ var addingTotalsByHour = function() {
   var cellUnderLocations = document.createElement('td');
   cellUnderLocations.setAttribute('class', 'emptyCell');
   tableTotalRow.appendChild(cellUnderLocations);
-  
+
   for(var i = 0; i < storeHours.length; i++){
     totalsByHour.push(totalsAcrossTheCompany[i]+totalsAcrossTheCompany[i+14]+totalsAcrossTheCompany[i+28]+totalsAcrossTheCompany[i+42]+totalsAcrossTheCompany[i+56]);
     var tableTotalChild = document.createElement('td');
