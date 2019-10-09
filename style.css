@@ -20,6 +20,13 @@ header {
     font-size: 50px;
     margin-top:80px;
 }
-table, th, tr, td {
+table, th, td {
     border: black solid 1px;
+}
+
+table {
+    widows: 100%;
+}
+.emptyCell {
+    border: none;
 }
