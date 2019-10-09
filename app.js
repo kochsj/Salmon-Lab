@@ -1,3 +1,4 @@
+'use strict';
 //RANDOM NUMBER GENERATOR/////////////////////////////////////////
 var numberOfCustomers = function(min, max) {
   min = Math.ceil(min);
@@ -27,29 +28,32 @@ var printTableHeadings = function() {
 printTableHeadings();
 
 //TOTAL ROW IN TABLE///////////////////////////////////////////
-var allStoreTotal = 0;
-var totalsAcrossTheCompany = [];
-var totalsByHour = [];
+var allStoreArray = [];
 // var tableTotalRow = document.getElementById('salesTable');
 var addingTotalsByHour = function() {
+  var totalsAcrossTheCompany = 0;
   var tableTotalRow = document.createElement('tr');
   tableTotalRow.setAttribute('id', 'totalsRow');
   tableHeadingStoreHours.appendChild(tableTotalRow);
   var cellUnderLocations = document.createElement('td');
   cellUnderLocations.setAttribute('class', 'emptyCell');
   tableTotalRow.appendChild(cellUnderLocations);
-
+  cellUnderLocations.textContent = 'Totals';
   for(var i = 0; i < storeHours.length; i++){
-    totalsByHour.push(totalsAcrossTheCompany[i]+totalsAcrossTheCompany[i+14]+totalsAcrossTheCompany[i+28]+totalsAcrossTheCompany[i+42]+totalsAcrossTheCompany[i+56]);
+    var totalsByHour = 0;
     var tableTotalChild = document.createElement('td');
     tableTotalRow.appendChild(tableTotalChild);
-    tableTotalChild.textContent = `${totalsByHour[i]}`;
+    for(var z = 0; z < allStoreArray.length; z++) {
+      totalsByHour += allStoreArray[z][i];
+      tableTotalChild.textContent = `${totalsByHour}`;
+    }
+    for(var j = 0; j < allStoreArray.length; j++) {
+      totalsAcrossTheCompany += allStoreArray[j][i];
+    }
   }
-  for(var z = 0; z < totalsAcrossTheCompany.length; z++)
-    allStoreTotal += totalsAcrossTheCompany[z];
-  var tableAllStoreTotal = document.createElement('td');
-  tableTotalRow.appendChild(tableAllStoreTotal);
-  tableAllStoreTotal.textContent = `${allStoreTotal}`;
+  var totalOfAllStoresCell = document.createElement('td');
+  tableTotalRow.appendChild(totalOfAllStoresCell);
+  totalOfAllStoresCell.textContent = `${totalsAcrossTheCompany}`;
 };
 
 //COFFEESHOP CONSTRUCTOR FUNCTION///////////////////////////////////
@@ -77,11 +81,11 @@ CoffeeShop.prototype.numberOfCookiesNeeded = function() {
     this.salesList.appendChild(storeSales);
     storeSales.textContent = `${this.cookiesPerHour[i]}`;
     this.totalCookiesPurch += this.cookiesPerHour[i];
-    totalsAcrossTheCompany.push(this.cookiesPerHour[i]);
   }
   var totalCookiesListItem = document.createElement('td');
   this.salesList.appendChild(totalCookiesListItem);
   totalCookiesListItem.textContent = `${this.totalCookiesPurch}`;
+  allStoreArray.push(this.cookiesPerHour);
 };
 
 //SEATTLE////////////////////////////////
@@ -100,4 +104,6 @@ parisCoffee.numberOfCookiesNeeded();
 var limaCoffee = new CoffeeShop(2, 16, 4.6, 'Lima');
 limaCoffee.numberOfCookiesNeeded();
 
+
 addingTotalsByHour();
+
