@@ -7,15 +7,21 @@ var numberOfCustomers = function(min, max) {
 
 //STORE HOURS - COLUMN HEADINGS//////////////////////////////////
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-var tableHeadingStoreHours = document.getElementById('firstSalesTableRow');
+var tableHeadingStoreHours = document.getElementById('salesTable');
 var printTableHeadings = function() {
+  var locationHeading = document.createElement('tr');
+  tableHeadingStoreHours.appendChild(locationHeading);
+  locationHeading.textContent = '';
+  var cellAboveLocations = document.createElement('td');
+  cellAboveLocations.setAttribute('class', 'emptyCell');
+  locationHeading.appendChild(cellAboveLocations);
   for(var a = 0; a < storeHours.length; a++) {
     var tableStoreHours = document.createElement('th');
-    tableHeadingStoreHours.appendChild(tableStoreHours);
+    locationHeading.appendChild(tableStoreHours);
     tableStoreHours.textContent = `${storeHours[a]}`;
   }
   var tableHeadingTotals = document.createElement('th');
-  tableHeadingStoreHours.appendChild(tableHeadingTotals);
+  locationHeading.appendChild(tableHeadingTotals);
   tableHeadingTotals.textContent = 'Daily Location Total';
 };
 printTableHeadings();
@@ -24,8 +30,15 @@ printTableHeadings();
 var allStoreTotal = 0;
 var totalsAcrossTheCompany = [];
 var totalsByHour = [];
-var tableTotalRow = document.getElementById('Totals');
+// var tableTotalRow = document.getElementById('salesTable');
 var addingTotalsByHour = function() {
+  var tableTotalRow = document.createElement('tr');
+  tableTotalRow.setAttribute('id', 'totalsRow');
+  tableHeadingStoreHours.appendChild(tableTotalRow);
+  var cellUnderLocations = document.createElement('td');
+  cellUnderLocations.setAttribute('class', 'emptyCell');
+  tableTotalRow.appendChild(cellUnderLocations);
+
   for(var i = 0; i < storeHours.length; i++){
     totalsByHour.push(totalsAcrossTheCompany[i]+totalsAcrossTheCompany[i+14]+totalsAcrossTheCompany[i+28]+totalsAcrossTheCompany[i+42]+totalsAcrossTheCompany[i+56]);
     var tableTotalChild = document.createElement('td');
@@ -47,10 +60,14 @@ var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.averageCookiesPerCustomer = averageCookiesPerCustomer;
   this.totalCookiesPurch = 0;
   this.cityName = cityName;
-  this.salesList = document.getElementById(`${this.cityName}`);
+  this.salesList = 0;
 };
 
 CoffeeShop.prototype.numberOfCookiesNeeded = function() {
+  this.row = document.createElement('tr');
+  this.row.setAttribute('id', this.cityName);
+  tableHeadingStoreHours.appendChild(this.row);
+  this.salesList = document.getElementById(this.cityName);
   var tableCityName = document.createElement('tr');
   this.salesList.appendChild(tableCityName);
   tableCityName.textContent = `${this.cityName}`;
