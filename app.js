@@ -16,19 +16,19 @@ function buildOutStore(event) {
   var minimum = event.target.minCustomers.value;
   var maximum = event.target.maxCustomers.value;
   if(isNaN(minimum) || minimum === '') {
-    alert(`"${minimum}" is not a vailid entry.`);
+    alert(`Minimum Number of Customers Per Hour Required. "${minimum}" is not a vailid entry.`);
     userForm.minCustomers.setAttribute('style', 'background-color: yellow;');
     return;
   } else if(isNaN(maximum) || maximum === ''){
-    alert(`"${maximum}" is not a valid entry.`);
+    alert(`Maximum Number of Customers Per Hour Required. "${maximum}" is not a valid entry.`);
     userForm.maxCustomers.setAttribute('style', 'background-color: yellow;');
     return;
   } else if(isNaN(average) || average === ''){
-    alert(`"${average}" is not a valid entry.`);
-    userForm.average.setAttribute('style', 'background-color: yellow;');
+    alert(`Average Cookies Purchased by Each Customer Required. "${average}" is not a valid entry.`);
+    userForm.averageCookies.setAttribute('style', 'background-color: yellow;');
     return;
   } else if(location === '' || true !== isNaN(location)){
-    alert(`"${location}" is not a valid entry.`);
+    alert(`City Name Required. "${location}" is not a valid entry.`);
     userForm.location.setAttribute('style', 'background-color: yellow;');
     return;
   } else {
@@ -36,10 +36,10 @@ function buildOutStore(event) {
     buildStore.numberOfCookiesNeeded();
     var dynamicTotalsRow = document.getElementById('totalsRow');
     dynamicTotalsRow.remove();
-    userForm.location.setAttribute('style', 'background-color: none;');
-    userForm.averageCookies.setAttribute('style', 'background-color: none;');
-    userForm.minCustomers.setAttribute('style', 'background-color: none;');
-    userForm.maxCustomers.setAttribute('style', 'background-color: none;');
+    userForm.location.setAttribute('style', '');
+    userForm.averageCookies.setAttribute('style', '');
+    userForm.minCustomers.setAttribute('style', '');
+    userForm.maxCustomers.setAttribute('style', '');
     addingTotalsByHour();
   }
 }
