@@ -15,34 +15,41 @@ function buildOutStore(event) {
   var average = event.target.averageCookies.value;
   var minimum = event.target.minCustomers.value;
   var maximum = event.target.maxCustomers.value;
+  userForm.location.setAttribute('style', '');
+  userForm.averageCookies.setAttribute('style', '');
+  userForm.minCustomers.setAttribute('style', '');
+  userForm.maxCustomers.setAttribute('style', '');
   if(isNaN(minimum) || minimum === '') {
     alert(`Minimum Number of Customers Per Hour Required. "${minimum}" is not a vailid entry.`);
-    userForm.minCustomers.setAttribute('style', 'background-color: yellow;');
+    userForm.minCustomers.setAttribute('style', 'background-color: rgb(243, 99, 99);');
+    userForm.minCustomers.style.border = 'dashed red 3px';
     return;
-  } else if(isNaN(maximum) || maximum === ''){
-    alert(`Maximum Number of Customers Per Hour Required. "${maximum}" is not a valid entry.`);
-    userForm.maxCustomers.setAttribute('style', 'background-color: yellow;');
-    return;
-  } else if(isNaN(average) || average === ''){
-    alert(`Average Cookies Purchased by Each Customer Required. "${average}" is not a valid entry.`);
-    userForm.averageCookies.setAttribute('style', 'background-color: yellow;');
-    return;
-  } else if(location === '' || true !== isNaN(location)){
-    alert(`City Name Required. "${location}" is not a valid entry.`);
-    userForm.location.setAttribute('style', 'background-color: yellow;');
-    return;
-  } else {
-    var buildStore = new CoffeeShop(minimum, maximum, average, location);
-    buildStore.numberOfCookiesNeeded();
-    var dynamicTotalsRow = document.getElementById('totalsRow');
-    dynamicTotalsRow.remove();
-    userForm.location.setAttribute('style', '');
-    userForm.averageCookies.setAttribute('style', '');
-    userForm.minCustomers.setAttribute('style', '');
-    userForm.maxCustomers.setAttribute('style', '');
-    addingTotalsByHour();
   }
+  if(isNaN(maximum) || maximum === ''){
+    alert(`Maximum Number of Customers Per Hour Required. "${maximum}" is not a valid entry.`);
+    userForm.maxCustomers.setAttribute('style', 'background-color: rgb(243, 99, 99);');
+    userForm.maxCustomers.style.border = 'dashed red 3px';
+    return;
+  }
+  if(isNaN(average) || average === ''){
+    alert(`Average Cookies Purchased by Each Customer Required. "${average}" is not a valid entry.`);
+    userForm.averageCookies.setAttribute('style', 'background-color: rgb(243, 99, 99);');
+    userForm.averageCookies.style.border = 'dashed red 3px';
+    return;
+  }
+  if(location === '' || true !== isNaN(location)){
+    alert(`City Name Required. "${location}" is not a valid entry.`);
+    userForm.location.setAttribute('style', 'background-color: rgb(243, 99, 99);');
+    userForm.location.style.border = 'dashed red 3px';
+    return;
+  }
+  var buildStore = new CoffeeShop(minimum, maximum, average, location);
+  buildStore.numberOfCookiesNeeded();
+  var dynamicTotalsRow = document.getElementById('totalsRow');
+  dynamicTotalsRow.remove();
+  addingTotalsByHour();
 }
+
 
 //STORE HOURS - COLUMN HEADINGS//////////////////////////////////
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -142,9 +149,8 @@ parisCoffee.numberOfCookiesNeeded();
 //LIMA/////////////////////////////////
 var limaCoffee = new CoffeeShop(2, 16, 4.6, 'Lima');
 limaCoffee.numberOfCookiesNeeded();
-//Houston////
-var houstonCoffee = new CoffeeShop(4, 45, 3.8, 'Houston');
-houstonCoffee.numberOfCookiesNeeded();
+
+
 
 addingTotalsByHour();
 
