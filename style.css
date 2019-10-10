@@ -38,4 +38,6 @@ input {
 
 form {
     display: inline-block;
+    background-color: black;
+    color: ivory;
 }

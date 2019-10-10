@@ -6,8 +6,8 @@ var numberOfCustomers = function(min, max) {
   return Math.floor(Math.random()*(max - min + 1)) + min;
 };
 //USER FORM EVENT HANDLER/////////////////////////////////////////
-var userFormThing = document.getElementById('userForm');
-userFormThing.addEventListener('submit', buildOutStore);
+var userForm = document.getElementById('userForm');
+userForm.addEventListener('submit', buildOutStore);
 
 function buildOutStore(event) {
   event.preventDefault();
@@ -15,12 +15,33 @@ function buildOutStore(event) {
   var average = event.target.averageCookies.value;
   var minimum = event.target.minCustomers.value;
   var maximum = event.target.maxCustomers.value;
-
-  var buildStore = new CoffeeShop(minimum, maximum, average, location);
-  buildStore.numberOfCookiesNeeded();
-  var dynamicTotalsRow = document.getElementById('totalsRow');
-  dynamicTotalsRow.remove();
-  addingTotalsByHour();
+  if(isNaN(minimum) || minimum === '') {
+    alert(`"${minimum}" is not a vailid entry.`);
+    userForm.minCustomers.setAttribute('style', 'background-color: yellow;');
+    return;
+  } else if(isNaN(maximum) || maximum === ''){
+    alert(`"${maximum}" is not a valid entry.`);
+    userForm.maxCustomers.setAttribute('style', 'background-color: yellow;');
+    return;
+  } else if(isNaN(average) || average === ''){
+    alert(`"${average}" is not a valid entry.`);
+    userForm.average.setAttribute('style', 'background-color: yellow;');
+    return;
+  } else if(location === '' || true !== isNaN(location)){
+    alert(`"${location}" is not a valid entry.`);
+    userForm.location.setAttribute('style', 'background-color: yellow;');
+    return;
+  } else {
+    var buildStore = new CoffeeShop(minimum, maximum, average, location);
+    buildStore.numberOfCookiesNeeded();
+    var dynamicTotalsRow = document.getElementById('totalsRow');
+    dynamicTotalsRow.remove();
+    userForm.location.setAttribute('style', 'background-color: none;');
+    userForm.averageCookies.setAttribute('style', 'background-color: none;');
+    userForm.minCustomers.setAttribute('style', 'background-color: none;');
+    userForm.maxCustomers.setAttribute('style', 'background-color: none;');
+    addingTotalsByHour();
+  }
 }
 
 //STORE HOURS - COLUMN HEADINGS//////////////////////////////////
