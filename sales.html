@@ -6,6 +6,19 @@
     </head>
     <body>
         <header>Day's Sales By City</header>
+        <form id="userForm">
+                <fieldset>
+                    <label>Enter City Name Here:</label>
+                    <input type="text" placeholder="City Name here" id="location">
+                    <label>Enter Minimum Number Of Customers Per Hour:</label>
+                    <input type="text" placeholder="Minimum Customers Per Hour" id="minCustomers">
+                    <label>Enter Maximum Number of Customers Per Hour</label>
+                    <input type="text" placeholder="Maximum Customers Per Hour" id="maxCustomers">
+                    <label>Enter Average Cookies Purchased By Each Customer:</label>
+                    <input type="text" placeholder="Average Cookies Purchased By Each Customer Here" id="averageCookies">
+                    <button value="submit">Submit</button>
+                </fieldset>
+        </form>
         <main>
             <table id="salesTable"></table>
         </main>
