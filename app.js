@@ -23,24 +23,28 @@ function buildOutStore(event) {
     alert(`Minimum Number of Customers Per Hour Required. "${minimum}" is not a vailid entry.`);
     userForm.minCustomers.setAttribute('style', 'background-color: rgb(243, 99, 99);');
     userForm.minCustomers.style.border = 'dashed red 3px';
+    event.target.minCustomers.value = null;
     return;
   }
   if(isNaN(maximum) || maximum === ''){
     alert(`Maximum Number of Customers Per Hour Required. "${maximum}" is not a valid entry.`);
     userForm.maxCustomers.setAttribute('style', 'background-color: rgb(243, 99, 99);');
     userForm.maxCustomers.style.border = 'dashed red 3px';
+    event.target.maxCustomers.value = null;
     return;
   }
   if(isNaN(average) || average === ''){
     alert(`Average Cookies Purchased by Each Customer Required. "${average}" is not a valid entry.`);
     userForm.averageCookies.setAttribute('style', 'background-color: rgb(243, 99, 99);');
     userForm.averageCookies.style.border = 'dashed red 3px';
+    event.target.averageCookies.value = null;
     return;
   }
   if(location === '' || true !== isNaN(location)){
     alert(`City Name Required. "${location}" is not a valid entry.`);
     userForm.location.setAttribute('style', 'background-color: rgb(243, 99, 99);');
     userForm.location.style.border = 'dashed red 3px';
+    event.target.location.value = null;
     return;
   }
   var buildStore = new CoffeeShop(minimum, maximum, average, location);
@@ -48,6 +52,7 @@ function buildOutStore(event) {
   var dynamicTotalsRow = document.getElementById('totalsRow');
   dynamicTotalsRow.remove();
   addingTotalsByHour();
+  userForm.reset();
 }
 
 
