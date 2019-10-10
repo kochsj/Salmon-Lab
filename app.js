@@ -47,7 +47,7 @@ function buildOutStore(event) {
     event.target.location.value = null;
     return;
   }
-  var buildStore = new CoffeeShop(minimum, maximum, average, location);
+  var buildStore = new CookieShop(minimum, maximum, average, location);
   buildStore.numberOfCookiesNeeded();
   var dynamicTotalsRow = document.getElementById('totalsRow');
   dynamicTotalsRow.remove();
@@ -106,8 +106,8 @@ var addingTotalsByHour = function() {
   totalOfAllStoresCell.textContent = `${totalsAcrossTheCompany}`;
 };
 
-//COFFEESHOP OBJECT CONSTRUCTOR FUNCTION///////////////////////////////////
-var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
+//CookieSHOP OBJECT CONSTRUCTOR FUNCTION///////////////////////////////////
+var CookieShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.cookiesPerHour = [];
   this.min = min;
   this.max = max;
@@ -117,8 +117,8 @@ var CoffeeShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.salesList = 0;
 };
 
-//COFFEESHOP METHOD///////////////////////////////////////////////////////
-CoffeeShop.prototype.numberOfCookiesNeeded = function() {
+//CookieSHOP METHOD///////////////////////////////////////////////////////
+CookieShop.prototype.numberOfCookiesNeeded = function() {
   this.row = document.createElement('tr');
   this.row.setAttribute('id', this.cityName);
   tableHeadingStoreHours.appendChild(this.row);
@@ -140,20 +140,20 @@ CoffeeShop.prototype.numberOfCookiesNeeded = function() {
 };
 
 //SEATTLE////////////////////////////////
-var seattleCoffee = new CoffeeShop(23, 65, 6.3, 'Seattle');
-seattleCoffee.numberOfCookiesNeeded();
+var seattleCookies = new CookieShop(23, 65, 6.3, 'Seattle');
+seattleCookies.numberOfCookiesNeeded();
 //TOKYO/////////////////////////////////
-var tokyoCoffee = new CoffeeShop(3, 24, 1.2, 'Tokyo');
-tokyoCoffee.numberOfCookiesNeeded();
+var tokyoCookies = new CookieShop(3, 24, 1.2, 'Tokyo');
+tokyoCookies.numberOfCookiesNeeded();
 //DUBAI/////////////////////////////////
-var dubaiCoffee = new CoffeeShop(11, 38, 3.7, 'Dubai');
-dubaiCoffee.numberOfCookiesNeeded();
+var dubaiCookies = new CookieShop(11, 38, 3.7, 'Dubai');
+dubaiCookies.numberOfCookiesNeeded();
 //PARIS/////////////////////////////////
-var parisCoffee = new CoffeeShop(20, 38, 2.3, 'Paris');
-parisCoffee.numberOfCookiesNeeded();
+var parisCookies = new CookieShop(20, 38, 2.3, 'Paris');
+parisCookies.numberOfCookiesNeeded();
 //LIMA/////////////////////////////////
-var limaCoffee = new CoffeeShop(2, 16, 4.6, 'Lima');
-limaCoffee.numberOfCookiesNeeded();
+var limaCookies = new CookieShop(2, 16, 4.6, 'Lima');
+limaCookies.numberOfCookiesNeeded();
 
 
 
