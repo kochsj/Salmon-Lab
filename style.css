@@ -6,9 +6,9 @@ article {
     color: snow;
 }
 html {
-    background-color: orange;
+    background-color: black;
 }
-body {
+body, header {
     width: 100%;
     margin: 0px;
 }
@@ -20,6 +20,7 @@ table, th, td {
 }
 table {
     widows: 100%;
+    background-color: orange;
 }
 .emptyCell {
     border: none;
@@ -28,7 +29,7 @@ table {
 
 input {
     display: table;
-    width: 175px;
+    width: 100%;
 }
 
 form {
@@ -36,42 +37,25 @@ form {
     background-color: black;
     color: ivory;
 }
-
+#styleButton {
+    width: 5vw;
+}
 li, ul, #styleButton {
     display: inline-block;
 }
-
-label {
-    font-size: 16px;
-}
-#userForm {
-    width: 450px;
-}
-#userEmail {
-    width: 100px;
-}
 #newsletter {
     display: inline-block;
-    width: 200px;
     padding: 0px;
-    height: 75px;
-}
-#newsLetter {
-    margin: 0px;
-    padding: 0px;
-    display: inline-block;
-    font-size: 12px;
-    background-color: orange;
-    width: 175px;
 }
 .navBar {
     display: inline-block;
     border: none;
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
 }
 .navBarAside {
-    width: 10%
+    font-size: 1vw;
 }
 #salmonPic {
     width: 10%;
@@ -80,25 +64,70 @@ label {
 h1 {
     width: 75%;
     text-align: center;
-    font-size: 60px;
+    font-size: 2vw;
+    color: white;
 }
 #navList {
     width: 80%;
+    margin: 1vw;
 }
 nav {
     background-color: black;
     color: white;
+    height: 50px;
 }
 a {
     color: inherit;
     text-decoration: none;
+    font-size: 1vw;
 }
 .navListItem {
     margin-left: 20%;
 }
 #seattleWaterfront {
     display: block;
-    margin-right: auto;
-    margin-left: auto;
     width: 100%;
+}
+.borderDiv {
+    height: 50px;
+    background-color: black;
+}
+.middlePictures {
+    display: inline-block;
+    width: 49%;
+    float: left;
+}
+main {
+    height: 35vw;
+    overflow: hidden;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#middleImages {
+    width: 2%;
+    display: inline-block;
+    float: left;
+}
+.pictureParagraph {
+    background-color: black;
+    color: red;
+    display: inline-block;
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    width: 33%;
+    height: 20vw;
+    overflow: scroll;
+}
+h3 {
+    text-align: center;
+    margin: 0px;
+    padding-top: 20px;
+    font-size: 2vw;
+}
+p {
+    padding: 15px;
+    margin: 0px;
+    font-size: 1.5vw;
 }
