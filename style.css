@@ -10,6 +10,7 @@ html {
 }
 body {
     width: 100%;
+    margin: 0px;
 }
 main {
     position: relative;
@@ -94,4 +95,10 @@ a {
 }
 .navListItem {
     margin-left: 20%;
+}
+#seattleWaterfront {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
 }
