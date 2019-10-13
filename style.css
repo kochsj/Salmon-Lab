@@ -2,27 +2,21 @@ article {
     display: inline-block;
     border: black solid 5px;
     font-family: 'Oswald', sans-serif;
+    background-color: rgb(83, 13, 13);
+    color: snow;
 }
 html {
     background-color: orange;
 }
-article {
-    background-color: rgb(83, 13, 13);
-    color: snow;
+body {
+    width: 100%;
 }
 main {
     position: relative;
-
-}
-header {
-    text-align: center;
-    font-size: 50px;
-    margin-top:80px;
 }
 table, th, td {
     border: black solid 1px;
 }
-
 table {
     widows: 100%;
 }
@@ -33,11 +27,57 @@ table {
 
 input {
     display: table;
-    width: 350px;
+    width: 175px;
 }
 
 form {
     display: inline-block;
     background-color: black;
     color: ivory;
+}
+
+li {
+    display: inline-block;
+}
+
+label {
+    font-size: 16px;
+}
+#userForm {
+    width: 450px;
+}
+#userEmail {
+    width: 100px;
+}
+#newsletter {
+    display: inline-block;
+    width: 200px;
+    padding: 0px;
+    height: 75px;
+}
+#newsLetter {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    font-size: 12px;
+    background-color: orange;
+    width: 175px;
+}
+.navBar {
+    display: inline-block;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+.navBarAside {
+    width: 10%
+}
+#salmonPic {
+    width: 10%;
+    height: 10%;
+}
+h1 {
+    width: 75%;
+    text-align: center;
+    font-size: 60px;
 }
