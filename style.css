@@ -6,7 +6,7 @@ article {
     color: snow;
 }
 html {
-    background-color: black;
+    /* background-color: black; */
 }
 body, header {
     width: 100%;
@@ -40,8 +40,9 @@ form {
 #styleButton {
     width: 5vw;
 }
-li, ul, #styleButton {
+ul, #styleButton {
     display: inline-block;
+    list-style-type: none;
 }
 #newsletter {
     display: inline-block;
@@ -64,7 +65,7 @@ li, ul, #styleButton {
 h1 {
     width: 75%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     color: white;
 }
 #navList {
@@ -74,7 +75,7 @@ h1 {
 nav {
     background-color: black;
     color: white;
-    height: 50px;
+    height: 3vw;
 }
 a {
     color: inherit;
@@ -82,6 +83,7 @@ a {
     font-size: 1vw;
 }
 .navListItem {
+    display: inline-block;
     margin-left: 20%;
 }
 #seattleWaterfront {
@@ -89,45 +91,73 @@ a {
     width: 100%;
 }
 .borderDiv {
-    height: 50px;
-    background-color: black;
+    height: 6vw;
 }
 .middlePictures {
     display: inline-block;
-    width: 49%;
+    width: 50%;
     float: left;
 }
-main {
-    height: 35vw;
+main, #secondMain {
+    height: 28vw;
     overflow: hidden;
     width: 100%;
     margin: 0px;
     padding: 0px;
 }
-#middleImages {
-    width: 2%;
-    display: inline-block;
-    float: left;
-}
 .pictureParagraph {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: red;
-    display: inline-block;
     position: absolute;
-    top: 15%;
-    left: 60%;
-    width: 33%;
-    height: 20vw;
+    padding-top: 1.7vw;
     overflow: scroll;
+}
+#pictureParagraph1 {
+    top: 20%;
+    left: 10%;
+    width: 40%;
+    height: 20vw;
+}
+#pictureParagraph2 {
+    top: 52%;
+    left: 50%;
+    width: 40%;
+    height: 20vw;
+}
+#pictureParagraph3 {
+    top: 10%;
+    left: 33%;
+    width: 33%;
+    height: 7vw;
 }
 h3 {
     text-align: center;
     margin: 0px;
-    padding-top: 20px;
+    padding-top: 0.5VW;
     font-size: 2vw;
 }
 p {
     padding: 15px;
     margin: 0px;
     font-size: 1.5vw;
+}
+.centerPicture {
+    width: 100%;
+}
+#secondParagraph {
+    position: relative;
+}
+.addresses {
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 30%;
+    font-size: 1vw;
+}
+h4 {
+    width: 100%;
+    font-size: 2vw;
+    margin: 0vw;
+    padding-left: 30%;
 }
