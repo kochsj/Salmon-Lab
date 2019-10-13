@@ -6,11 +6,12 @@ article {
     color: snow;
 }
 html {
-    /* background-color: black; */
+    background-color: black;
 }
 body, header {
     width: 100%;
-    margin: 0px;
+    margin: 0vw;
+    padding: 0vw;
 }
 main {
     position: relative;
@@ -34,7 +35,6 @@ input {
 
 form {
     display: inline-block;
-    background-color: black;
     color: ivory;
 }
 #styleButton {
@@ -61,13 +61,15 @@ ul, #styleButton {
 }
 .navBarAside {
     font-size: 1vw;
+    text-align: center;
+    margin: 0.2vw;
 }
 #salmonPic {
     width: 10%;
     height: 10%;
 }
 h1 {
-    width: 75%;
+    width: 79%;
     text-align: center;
     font-size: 3vw;
     color: white;
@@ -113,28 +115,47 @@ main, #secondMain {
 }
 .pictureParagraph {
     background-color: rgba(0, 0, 0, 0.8);
-    color: red;
+    color: white;
     position: absolute;
-    padding-top: 1.7vw;
+    padding-top: 2.5vw;
     overflow: scroll;
 }
 #pictureParagraph1 {
-    top: 20%;
-    left: 10%;
+    top: 3%;
+    left: 30%;
     width: 40%;
     height: 20vw;
 }
 #pictureParagraph2 {
-    top: 52%;
-    left: 50%;
-    width: 40%;
+    top: 40%;
+    left: 15%;
+    width: 70%;
     height: 20vw;
 }
 #pictureParagraph3 {
-    top: 10%;
     left: 33%;
     width: 33%;
     height: 7vw;
+}
+#pictureParagraph4 {
+    bottom: 7%;
+    left: 37%;
+    width: 26%;
+    height: 10vw;
+    text-align: center;
+    overflow: hidden;
+}
+#signUp {
+    font-size: 2vw;
+}
+#signUpInput {
+    margin-top: 0.8vw;
+    margin-bottom: 0.8vw;
+    height: 1.2vw;
+}
+#userEmail {
+    width: 100%;
+    float: left;
 }
 h3 {
     text-align: center;
@@ -167,12 +188,14 @@ p {
 }
 h4 {
     display: inline-block;
-    font-size: 2vw;
+    font-size: 3vw;
     margin: 0vw;
     width: 49%;
 }
 footer {
     font-size: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
 }
 .footerItem {
     font-size: 1.3vw;
@@ -191,4 +214,7 @@ footer {
 .footerList {
     margin: 0vw;
     padding: 0vw;
+}
+footer, .addresses, #Locations {
+    color: white;
 }
