@@ -28,10 +28,9 @@
             <!-- <button id="styleButton">STYLE</button> -->
         </nav>
         <img src="ultimate-seattle-wallpaper.jpg" alt="seattle waterfront" id="seattleWaterfront">
-        <main>
-                <table id="salesTable"></table>
-        </main>
-        <div class="borderDiv">
+        <div class="borderDiv"></div>
+        <table id="salesTable"></table>
+        <div class="borderDiv"></div>
                 <p id="tableParagraph">Using the form below you can add new store locations and adjust the values for existing locations.</p>
         </div>
         <form id="userForm">
@@ -44,12 +43,31 @@
                     <input type="text" placeholder="Maximum Customers Per Hour" id="maxCustomers">
                     <label>Enter Average Cookies Purchased By Each Customer:</label>
                     <input type="text" placeholder="Average Cookies Purchased By Each Customer Here" id="averageCookies">
-                    <button value="submit">Submit</button>
+                    <button value="submit" id="submitButton">Submit</button>
                 </fieldset>
         </form>
 
     </body>
+    <div class="borderDiv">
     <footer>
-        <script src="app.js"></script>
-    </footer>
+            <div id="footerHeader">
+                <h4>STORE HOURS</h4>
+                <h4>CONTACT US</h4>
+            </div>
+            <div class="footerHeaders">
+                <ul class="footerList">
+                    <li class="footerItem">6AM to 8PM</li>
+                    <li class="footerItem">7 Days a Week</li>
+                </ul>
+            </div>
+            <div class="footerHeaders">
+                <ul class="footerList">
+                    <li>
+                        <a  class="footerItem" href="">support@patssalmoncookies.net</a>
+                    </li>
+                    <li class="footerItem">T: +1(206)888-1234</li>
+                </ul>
+            </div>
+            <script src="app.js"></script>
+        </footer> 
 </html>

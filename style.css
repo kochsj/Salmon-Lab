@@ -1,3 +1,19 @@
+/* These are my three unique font styles (googlefont, sans-serif, and serif) and their three unique colors */
+h4, #Locations, .navBar, .navListItem {
+    font-family: 'Mansalva', cursive;
+    color: goldenrod;
+}
+.addresses, .footerHeaders {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+.pictureParagraph, #userForm, #tableParagraph {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+
+
 html {
     background-color: black;
 }
@@ -6,15 +22,14 @@ body, header {
     margin: 0vw;
     padding: 0vw;
 }
-main {
-    position: relative;
-}
 table, th, td {
-    border: black solid 1px;
+    border: black solid 0.1vw;
+    padding: 0.5vw;
+    text-align: center;
 }
 table {
-    widows: 100%;
-    background-color: orange;
+    background-color: goldenrod;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .emptyCell {
     border: none;
@@ -92,7 +107,6 @@ a {
     height: 6vw;
 }
 .middlePictures {
-    display: inline-block;
     width: 50%;
     float: left;
 }
@@ -105,11 +119,9 @@ main, #secondMain {
 }
 .pictureParagraph {
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
     position: absolute;
     padding-top: 2.5vw;
     overflow: scroll;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #pictureParagraph1 {
     top: 3%;
@@ -170,23 +182,15 @@ p {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 30%;
+    padding-left: 20%;
     font-size: 1.3vw;
-}
-.addresses, .footerHeaders {
-    font-family: Arial, Helvetica, sans-serif;
-    color: grey;
 }
 .cityAddress {
     margin-left: 5.5vw;
 }
 #Locations {
-    padding-left: 30%;
+    padding-left: 20%;
     width: 100%;
-}
-h4, #Locations, .navBar, .navListItem {
-    font-family: 'Mansalva', cursive;
-    color: goldenrod;
 }
 h4 {
     display: inline-block;
@@ -200,7 +204,7 @@ footer {
     margin-bottom: 10vw;
 }
 .footerItem {
-    font-size: 1.3vw;
+    font-size: 1.8vw;
 }
 #footerHeader {
     text-align: center;
@@ -219,16 +223,25 @@ footer {
 }
 #userForm, #tableParagraph {
     width: 50%;
-    margin-left: 50%;
+    margin-left: 25%;
     font-size: 1.5vw;
     text-align: center;
 }
 #tableParagraph {
     margin-right: 3%;
     width: 47%;
+    font-size: 2vw;
 }
 #salesTable {
     width: 100%;
     height: 100%;
     font-size: 2vw;
+}
+input {
+    height: 2vw;
+}
+#submitButton {
+    height: 3vw;
+    width: 6vw;
+    margin-top: 1vw;
 }
