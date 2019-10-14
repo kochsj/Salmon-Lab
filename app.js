@@ -20,7 +20,7 @@ function buildOutStore(event) {
   userForm.minCustomers.setAttribute('style', '');
   userForm.maxCustomers.setAttribute('style', '');
   for(var m = 0; m < storeObjectArray.length; m++){
-    if(location === storeObjectArray[m].cityName) {
+    if(location.toUpperCase() === storeObjectArray[m].cityName) {
       var removeToReplace = document.getElementById(`${storeObjectArray[m].cityName}`);
       removeToReplace.remove();
       storeObjectArray.splice(m, 1);
@@ -129,7 +129,7 @@ var CookieShop = function(min, max, averageCookiesPerCustomer, cityName) {
   this.max = max;
   this.averageCookiesPerCustomer = averageCookiesPerCustomer;
   this.totalCookiesPurch = 0;
-  this.cityName = cityName;
+  this.cityName = cityName.toUpperCase();
   this.salesList = 0;
 };
 
@@ -139,7 +139,7 @@ CookieShop.prototype.numberOfCookiesNeeded = function() {
   this.row.setAttribute('id', this.cityName);
   tableHeadingStoreHours.appendChild(this.row);
   this.salesList = document.getElementById(this.cityName);
-  var tableCityName = document.createElement('tr');
+  var tableCityName = document.createElement('td');
   this.salesList.appendChild(tableCityName);
   tableCityName.textContent = `${this.cityName}`;
   for(var i = 0; i < storeHours.length; i++) {
