@@ -28,7 +28,6 @@ input {
 
 form {
     display: inline-block;
-    color: ivory;
 }
 #styleButton {
     width: 5vw;
@@ -50,7 +49,7 @@ ul, #styleButton {
     border: none;
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    font-size: 4vw;
 }
 .navBarAside {
     font-size: 1vw;
@@ -65,15 +64,13 @@ h1 {
     width: 79%;
     text-align: center;
     font-size: 3vw;
-    color: white;
 }
 #navList {
-    width: 80%;
+    width: 100%;
     margin: 1vw;
 }
 nav {
     background-color: black;
-    color: white;
     height: 6vw;
     padding-top: 1.5vw;
     position: relative;
@@ -85,7 +82,7 @@ a {
 }
 .navListItem {
     display: inline-block;
-    margin-left: 8%;
+    margin-left: 9%;
 }
 #seattleWaterfront {
     display: block;
@@ -112,6 +109,7 @@ main, #secondMain {
     position: absolute;
     padding-top: 2.5vw;
     overflow: scroll;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #pictureParagraph1 {
     top: 3%;
@@ -160,7 +158,6 @@ p {
     padding: 15px;
     margin: 0px;
     font-size: 1.5vw;
-    color: white;
 }
 .centerPicture {
     width: 100%;
@@ -176,9 +173,20 @@ p {
     padding-left: 30%;
     font-size: 1.3vw;
 }
+.addresses, .footerHeaders {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+.cityAddress {
+    margin-left: 5.5vw;
+}
 #Locations {
     padding-left: 30%;
     width: 100%;
+}
+h4, #Locations, .navBar, .navListItem {
+    font-family: 'Mansalva', cursive;
+    color: goldenrod;
 }
 h4 {
     display: inline-block;
@@ -208,9 +216,6 @@ footer {
 .footerList {
     margin: 0vw;
     padding: 0vw;
-}
-footer, .addresses, #Locations {
-    color: white;
 }
 #userForm, #tableParagraph {
     width: 50%;
