@@ -5,7 +5,35 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>Day's Sales By City</header>
+        <header>
+            <img src="salmon-cookie logo.png" alt="Salmon Cookie Logo" class="navBar" id="salmonPic">
+            <h1 class="navBar">DAILY SALES PROJECTIONS</h1>
+            <img src="salmon-cookie logo.png" alt="Salmon Cookie Logo" class="navBar" id="salmonPic">
+        </header>
+        <nav>
+            <ul id="navList">
+                <li class="navListItem">
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="navListItem">
+                    <a href="">STORE</a>
+                </li>
+                <li class="navListItem">
+                    <a href="">ORDERS</a>
+                </li>
+                <li class="navListItem">
+                    <a href="sales.html">DAILY SALES PROJECTIONS</a>
+                </li>
+            </ul>
+            <button id="styleButton">STYLE</button>
+        </nav>
+        <img src="ultimate-seattle-wallpaper.jpg" alt="seattle waterfront" id="seattleWaterfront">
+        <main>
+                <table id="salesTable"></table>
+        </main>
+        <div class="borderDiv">
+                <p id="tableParagraph">Using the form below you can add new store locations and adjust the values for existing locations.</p>
+        </div>
         <form id="userForm">
                 <fieldset>
                     <label>Enter City Name Here:</label>
@@ -19,9 +47,7 @@
                     <button value="submit">Submit</button>
                 </fieldset>
         </form>
-        <main>
-            <table id="salesTable"></table>
-        </main>
+
     </body>
     <footer>
         <script src="app.js"></script>
