@@ -1,30 +1,35 @@
-article {
-    display: inline-block;
-    border: black solid 5px;
-    font-family: 'Oswald', sans-serif;
+/* These are my three unique font styles (googlefont, sans-serif, and serif) and their three unique colors */
+h4, #Locations, .navBar, .navListItem {
+    font-family: 'Mansalva', cursive;
+    color: goldenrod;
 }
-html {
-    background-color: orange;
+.addresses, .footerHeaders {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
 }
-article {
-    background-color: rgb(83, 13, 13);
-    color: snow;
+.pictureParagraph, #userForm, #tableParagraph {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
 }
-main {
-    position: relative;
 
+
+
+html {
+    background-color: black;
 }
-header {
-    text-align: center;
-    font-size: 50px;
-    margin-top:80px;
+body, header {
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
 }
 table, th, td {
-    border: black solid 1px;
+    border: black solid 0.1vw;
+    padding: 0.5vw;
+    text-align: center;
 }
-
 table {
-    widows: 100%;
+    background-color: goldenrod;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .emptyCell {
     border: none;
@@ -33,11 +38,210 @@ table {
 
 input {
     display: table;
-    width: 350px;
+    width: 100%;
 }
 
 form {
     display: inline-block;
+}
+#styleButton {
+    width: 5vw;
+    height: 2vw;
+    position: absolute;
+    top: 2.75vw;
+    font-size: 1vw;
+}
+ul, #styleButton {
+    display: inline-block;
+    list-style-type: none;
+}
+#newsletter {
+    display: inline-block;
+    padding: 0px;
+}
+.navBar {
+    display: inline-block;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 4vw;
+}
+.navBarAside {
+    font-size: 1vw;
+    text-align: center;
+    margin: 0.2vw;
+}
+#salmonPic {
+    width: 10%;
+    height: 10%;
+}
+h1 {
+    width: 79%;
+    text-align: center;
+    font-size: 3vw;
+}
+#navList {
+    width: 100%;
+    margin: 1vw;
+}
+nav {
     background-color: black;
-    color: ivory;
+    height: 6vw;
+    padding-top: 1.5vw;
+    position: relative;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2vw;
+}
+.navListItem {
+    display: inline-block;
+    margin-left: 9%;
+}
+#seattleWaterfront {
+    display: block;
+    width: 100%;
+}
+.borderDiv {
+    height: 6vw;
+}
+.middlePictures {
+    width: 50%;
+    float: left;
+}
+main, #secondMain {
+    height: 28vw;
+    overflow: hidden;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.pictureParagraph {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    padding-top: 2.5vw;
+    overflow: scroll;
+}
+#pictureParagraph1 {
+    top: 3%;
+    left: 30%;
+    width: 40%;
+    height: 20vw;
+}
+#pictureParagraph2 {
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 20vw;
+}
+#pictureParagraph3 {
+    left: 33%;
+    width: 33%;
+    height: 7vw;
+}
+#pictureParagraph4 {
+    bottom: 7%;
+    left: 37%;
+    width: 26%;
+    height: 10vw;
+    text-align: center;
+    overflow: hidden;
+}
+#signUp {
+    font-size: 2vw;
+}
+#signUpInput {
+    margin-top: 0.8vw;
+    margin-bottom: 0.8vw;
+    height: 1.2vw;
+}
+#userEmail {
+    width: 100%;
+    float: left;
+}
+h3 {
+    text-align: center;
+    margin: 0px;
+    padding-top: 0.5VW;
+    font-size: 2vw;
+}
+p {
+    padding: 15px;
+    margin: 0px;
+    font-size: 1.5vw;
+}
+.centerPicture {
+    width: 100%;
+}
+#secondParagraph {
+    position: relative;
+}
+.addresses {
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20%;
+    font-size: 1.3vw;
+}
+.cityAddress {
+    margin-left: 5.5vw;
+}
+#Locations {
+    padding-left: 20%;
+    width: 100%;
+}
+h4 {
+    display: inline-block;
+    font-size: 3vw;
+    margin: 0vw;
+    width: 49%;
+}
+footer {
+    font-size: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+}
+.footerItem {
+    font-size: 1.8vw;
+}
+#footerHeader {
+    text-align: center;
+}
+.footerHeaders {
+    display: inline-block;
+    font-size: 2vw;
+    margin: 0vw;
+    width: 49%;
+    text-align: center;
+    padding: 0vw;
+}
+.footerList {
+    margin: 0vw;
+    padding: 0vw;
+}
+#userForm, #tableParagraph {
+    width: 50%;
+    margin-left: 25%;
+    font-size: 1.5vw;
+    text-align: center;
+}
+#tableParagraph {
+    margin-right: 3%;
+    width: 47%;
+    font-size: 2vw;
+}
+#salesTable {
+    width: 100%;
+    height: 100%;
+    font-size: 2vw;
+}
+input {
+    height: 2vw;
+}
+#submitButton {
+    height: 3vw;
+    width: 6vw;
+    margin-top: 1vw;
 }

@@ -2,27 +2,137 @@
 <html>
     <head>
         <title>Salmon-Cookies</title>
-        <link rel="stylesheet" href="styleIndex.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div><img src="salmon-cookie logo.png" alt="Salmon Cookie Logo"></div>
-    <article id="parentElement">
-        <p id="childElement"></p>
-    </article>
-    <form id="userForm">
-        <fieldset>
-            <label>Enter City Name Here:</label>
-            <input type="text" placeholder="City Name here...">
-            <label>Enter Average Cookies Purchased By Each Customer:</label>
-            <input type="text" placeholder="Average Cookies Purchased By Each Customer Here...">
-            <label>Enter Minimum Number Of Customers Per Hour:</label>
-            <input type="text" placeholder="Minimum Customers Per Hour...">
-            <label>Enter Maximum Number of Customers Per Hour</label>
-            <input type="text" placeholder="Maximum Customers Per Hour...">
-            <button value="submit">Submit</button>
-        </fieldset>
-    </form>
-        
+        <header>
+            <img src="salmon-cookie logo.png" alt="Salmon Cookie Logo" class="navBar" id="salmonPic">
+            <h1 class="navBar">PAT'S SALMON COOKIES</h1>
+            <img src="salmon-cookie logo.png" alt="Salmon Cookie Logo" class="navBar" id="salmonPic">
+        </header>
+        <nav>
+            <ul id="navList">
+                <li class="navListItem">
+                    <a href="index.html">HOME</a>
+                </li>
+                <!-- Page not complete yet - Stretch Goal -->
+                <li class="navListItem">
+                    <a href="">STORE</a>
+                </li>
+                <!-- Page not complete yet - Stretch Goal -->                
+                <li class="navListItem">
+                    <a href="">ORDERS</a>
+                </li>
+                <li class="navListItem">
+                    <a href="sales.html">DAILY SALES PROJECTIONS</a>
+                </li>
+            </ul>
+            <!-- Style button not set yet - Stretch Goal -->
+            <!-- <button id="styleButton">STYLE</button> -->
+        </nav>
+            <!-- Ultimate Seattle Wallpaper image sourced from: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj6t8jT85nlAhXeKDQIHZvoDlkQjRx6BAgBEAQ&url=http%3A%2F%2Fnatewhitehill.com%2Fepically-high-res-seattle-skyline-shot-7573x1947-pixels%2F&psig=AOvVaw1sDT_Z4N8J6EU2ahJsUI3_&ust=1571079038610189 -->
+        <img src="ultimate-seattle-wallpaper.jpg" alt="seattle waterfront" id="seattleWaterfront">
+        <!-- <div class="borderDiv"></div> -->
+        <main>
+            <div id="pictureParagraph3" class="pictureParagraph">
+                <h3>PAT'S SALMON COOKIES</h3>
+                <h3>EST. 1961</h3>
+            </div>
+             <!-- Pike Place image sourced from: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi39cre9ZnlAhWhJTQIHeK3DmgQjRx6BAgBEAQ&url=http%3A%2F%2Fwww.animalhi.com%2FFishes%2Fpikes%2Fstreets_signs_seattle_2048x1536_wallpaper_2767%2Fdownload_1920x1200&psig=AOvVaw31qYNbibnxxKDAjhVY6g-k&ust=1571079537872110 -->
+            <img src="pikePlace.jpg" alt="pike place market sign" class="middlePictures">
+            <!-- <div id="middleImages">div</div> -->
+            <!-- Old seattle image sourced from: https://d3exkutavo4sli.cloudfront.net/wp-content/uploads/2016/01/retro-seattle-1960s-3.jpg -->
+            <img src="retro-seattle-1960s-3.jpg" alt="Seattle 1960"class="middlePictures">
+        </main>
+        <!-- <div class="borderDiv"></div> -->
+        <div id="secondParagraph">
+            <!-- cozy shop image sourced from https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiG9-e3hZrlAhWrGjQIHbVCB5wQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FCozyPlaces%2Fcomments%2Fa6y259%2Fa_cozy_coffee_shop_corner%2F&psig=AOvVaw0_k2sgPZntgjjT51HCpfIF&ust=1571083790345631 -->
+            <img src="cozyShop.jpg" alt="inside of a bakery" class="centerPicture">
+            <div id="pictureParagraph1" class="pictureParagraph">
+                <h3>Family Tradition</h3>
+                <p>Our father and company founder, Pat Trout, was born and raised in Seattle, WA. Inspired by the majestic Sockeye Salmon, our father blended the famous sockeye salmon flavor and savory home-made cookies to create our world renowned Salmon Cookies&trade;. Founded in 1961, Pat's Salmon Cookies has been crafting delicious pastries for the people of Seattle ever since. </p>
+            </div>
+            <div id="pictureParagraph2" class="pictureParagraph">
+                <h3>A Taste Like No Other</h3>
+                <!-- Fake people. Fake reviews. -->
+                <p>"Nothing can top that oily greesy salmon cookie. The fishy aftertaste will transport you out of this world. Your going to like the way they taste. I guarantee it." - Men's Storehouse / December 2018</p>
+                <p>"I couldn't believe the salmoney goodness!" - Will Gates / June 2018</p>
+                <p>"My family and I make sure to take a trip into Pat's everytime we are in Seattle. We can't get enough! - Jeff Beehaus / Feb 2019</p>
+            </div>
+            <div id="pictureParagraph4" class="pictureParagraph">
+                <form>
+                    <label id="signUp">Sign up to receive updates!</label>
+                    <input type="text" placeholder="Your Email" id="signUpInput">
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+            <div class="borderDiv"></div>
+            <h4 id="Locations">LOCATIONS</h4>
+            <div class="addresses">
+                <ul>SEATTLE
+                    <li>123 Main Street</li>
+                    <li>Seattle, WA 98101</li>
+                    <li>United States</li>
+                    <li>T: +1(206)888-1234</li>
+                </ul>
+                <!-- Tokyo address info from: https://www.japan-guide.com/e/e2224.html -->
+                <ul class="cityAddress">TOKYO
+                    <li>6-3-2 Ginza, Chuo-ku</li>
+                    <li>Tokyo 244-6522</li>
+                    <li>Japan</li>
+                    <li>T: +81(012)345-6789</li>
+                </ul>
+                <!-- Dubai info from: https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Arab_Emirates && https://earth.google.com/web/@25.1906016,55.2517492,1.77764818a,945.16154934d,35y,-136.46929526h,45t,0r/data=ChUaEwoLL2cvMXRkNHNybnMYASABKAI-->
+                <ul class="cityAddress">DUBAI
+                    <li>30 B Street</li>
+                    <li>Dubai</li>
+                    <li>United Arab Emirates</li>  
+                    <li>T: +971(03)123-4567</li>
+                </ul>
+            </div>
+            <div class="addresses">
+                <!-- France info from: https://transferwise.com/gb/blog/calling-codes-for-france && https://m.wikihow.com/Address-a-Letter-to-France-->
+                <ul>PARIS
+                    <li>118 Boulevard Saint-Germain</li>
+                    <li>75006 Paris</li>
+                    <li>France</li>
+                    <li>T: +33(1)98 76 54 32</li>
+                </ul>    
+                <!-- Lima info from: https://en.wikipedia.org/wiki/Telephone_numbers_in_Peru && http://www.expatperu.com/expatforums/viewtopic.php?t=11118-->
+                <ul>LIMA
+                    <li>Edificio Colicanto; Malecon De La Reserva 411, dpto A</li>
+                    <li>Miraflores, Lima 18</li>
+                    <li>Peru</li>
+                    <li>T: +51(011)51 1 7354209</li>
+                </ul>
+            </div>      
+        <div class="borderDiv"></div>
+        <div id="secondMain">
+            <!-- BakeryImage sourced from: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwioruTElZrlAhUiLX0KHSyLA0YQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.pdxmonthly.com%2Farticles%2F2018%2F3%2F6%2Fsame-same-but-different-philippe-s-bread-is-now-dos-hermanos-bakery&psig=AOvVaw2ddh8URFpehtL9OsILdsBl&ust=1571088101096342 -->
+            <img src="bakeryImage.webp" alt="picture of bakery interior" class="middlePictures">
+           <!-- salmonPic sourced from: https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi9n4SAlJrlAhXxNX0KHQY3A4QQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.consumerreports.org%252Fhealthy-eating%252Fhow-often-should-you-be-eating-fish%252F%26psig%3DAOvVaw2ASxxT8xYSqnFLev0batd_%26ust%3D1571087555556105&psig=AOvVaw2ASxxT8xYSqnFLev0batd_&ust=1571087555556105 -->
+            <img src="salmonPic.jpeg" alt="picture of salmon" class="middlePictures">
+        </div>
+        <footer>
+            <div id="footerHeader">
+                <h4>STORE HOURS</h4>
+                <h4>CONTACT US</h4>
+            </div>
+            <div class="footerHeaders">
+                <ul class="footerList">
+                    <li class="footerItem">6AM to 8PM</li>
+                    <li class="footerItem">7 Days a Week</li>
+                </ul>
+            </div>
+            <div class="footerHeaders">
+                <ul class="footerList">
+                    <li>
+                        <a  class="footerItem" href="">support@patssalmoncookies.net</a>
+                    </li>
+                    <li class="footerItem">T: +1(206)888-1234</li>
+                </ul>
+            </div>
+        </footer> 
     </body>
-
 </html>
